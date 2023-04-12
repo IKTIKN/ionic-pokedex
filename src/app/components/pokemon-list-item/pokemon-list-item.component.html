@@ -1,0 +1,12 @@
+<ion-item [routerLink]="'/pokemon/' + index" [detail]="true">
+    <ion-thumbnail slot="start">
+        <img alt="Pokemon sprite" [src]="spriteUrl" />
+    </ion-thumbnail>
+    <ion-label class="">
+        <!-- <ion-badge slot="start" color="danger"> <span class="x-small">#{{ index + 1 }}</span></ion-badge> -->
+        <h1>
+            {{ pokemon.name | titlecase }}
+        </h1>
+    </ion-label>
+
+</ion-item>

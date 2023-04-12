@@ -29,6 +29,9 @@ ion-item ion-note {
   font-weight: normal;
 }
 
+ion-badge {
+    margin-right: 4px;
+}
 h1 {
   margin: 0;
   font-weight: bold;
@@ -37,4 +40,24 @@ h1 {
 
 p {
   line-height: 22px;
+}
+
+
+.pokemon-sprite {
+    // background-color: rgba(250, 128, 114, 0.199);
+    // border: 1px solid salmon;
+    max-height: 30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    border-radius: 16px;
+}
+
+ion-segment {
+        // background-color: rgba(250, 128, 114, 0.199);
+    // border: 1px solid salmon;
+}
+
+#label-small {
+    max-width: 64px!important;
 }

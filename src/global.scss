@@ -24,3 +24,86 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+.normal-type-color {
+    background-color: #AEB19C;
+}
+
+.poison-type-color {
+    background-color: #9D5994;
+}
+
+.psychic-type-color {
+    background-color: #9D5994;
+}
+
+.grass-type-color {
+    background-color: #7EC447;
+}
+
+.ground-type-color {
+    background-color: #D9B74C;
+}
+
+.ice-type-color {
+    background-color: #84DDFD;
+}
+
+.fire-type-color {
+    background-color: #E54C3C;
+}
+
+.rock-type-color {
+    background-color: #BBAC67;
+}
+
+.dragon-type-color {
+    background-color: #7C6EF5;
+}
+
+.water-type-color {
+    background-color: #4B9DFF;
+}
+
+.bug-type-color {
+    background-color: #B1BF22;
+}
+
+.dark-type-color {
+    background-color: #81604D;
+}
+
+.fighting-type-color {
+    background-color: #A35348;
+}
+
+.ghost-type-color {
+    background-color: #6C6EC1;
+}
+
+.steel-type-color {
+    background-color: #B0B0BC;
+}
+
+.flying-type-color {
+    background-color: #6897F3;
+}
+
+.electric-type-color {
+    background-color: #F8CC2D;
+}
+
+.fairy-type-color {
+    background-color: #E29EEB;
+}
+
+.x-small {
+    font-size: x-small!important;
+}
+
+ion-spinner {
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    // height: 100%;
+}
