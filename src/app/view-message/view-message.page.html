@@ -20,7 +20,7 @@
             <ion-badge *ngFor="let type of pokemonData.pokemonDetail.types;" [ngClass]="getTypeColor(type.type.name)">
                 {{ type.type.name }}
             </ion-badge>
-            
+
         </ion-label>
 
 
@@ -28,11 +28,11 @@
             <p>XP</p>
             <h1>{{ pokemonData.pokemonDetail.base_experience }}</h1>
         </ion-label>
-        <ion-label  id="label-small">
+        <ion-label id="label-small">
             <p>Height</p>
             <h1>{{ pokemonData.pokemonDetail.height }}</h1>
         </ion-label>
-        <ion-label  id="label-small">
+        <ion-label id="label-small">
             <p>Weight</p>
             <h1>{{ pokemonData.pokemonDetail.weight }}</h1>
         </ion-label>
@@ -40,7 +40,15 @@
     </ion-item>
 
     <div class="ion-padding">
-        <img class="pokemon-sprite" [src]="spriteUrl" alt="Pokemon sprite" >
+        <swiper-container>
+            <swiper-slide>
+                <img class="pokemon-sprite" [src]="spriteUrl" alt="Pokemon sprite">
+            </swiper-slide>
+            <swiper-slide>
+                <img class="pokemon-sprite" [src]="shinySpriteUrl" alt="Pokemon sprite">
+            </swiper-slide>
+        </swiper-container>
+
         <ion-segment value="default">
             <ion-segment-button value="default">
                 <ion-label>Stats</ion-label>

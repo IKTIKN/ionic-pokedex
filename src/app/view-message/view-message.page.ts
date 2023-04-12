@@ -1,11 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IonicModule, Platform } from '@ionic/angular';
 import { PokemonDetailResponse, PokemonListItem } from '../interfaces/PokemonResponse';
 import { PokeApiService } from '../service/poke-api.service';
 import { DataService, Message } from '../services/data.service';
 import { PokeDataService } from '../services/poke-data.service';
+import { register, SwiperSlide } from 'swiper/element/bundle';
+import Swiper from 'swiper';
+register();
 
 @Component({
     selector: 'app-view-message',
@@ -13,6 +16,8 @@ import { PokeDataService } from '../services/poke-data.service';
     styleUrls: ['./view-message.page.scss'],
     standalone: true,
     imports: [IonicModule, CommonModule],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+
 })
 export class ViewMessagePage implements OnInit {
     public pokemonData = inject(PokeDataService);
@@ -23,7 +28,7 @@ export class ViewMessagePage implements OnInit {
     pokemonListItem!: PokemonListItem;
 
     spriteUrl!: string;
-    gameboySpriteUrl!: string;
+    shinySpriteUrl!: string;
     index!: string;
 
     constructor() { }
@@ -31,7 +36,7 @@ export class ViewMessagePage implements OnInit {
     ngOnInit() {
         this.index = this.activatedRoute.snapshot.paramMap.get('id') as string;
         this.spriteUrl = this.pokemonData.getSpriteUrl(this.index);
-        this.gameboySpriteUrl = this.pokemonData.getGameboySpriteUrl(this.index);
+        this.shinySpriteUrl = this.pokemonData.getShinySpriteUrl(this.index);
 
         // this.pokemonListItem = this.pokemonData.getPokemonById(parseInt(id, 10) - 1);
         this.pokemonApi.getPokemonDetail(parseInt(this.index, 10))

@@ -19,7 +19,7 @@ export class PokeDataService {
         return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index}.png`; 
     }
 
-    getGameboySpriteUrl(index: string): string {
-        return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png`;
+    getShinySpriteUrl(index: string): string {
+        return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${index}.png`; 
     }
 }
