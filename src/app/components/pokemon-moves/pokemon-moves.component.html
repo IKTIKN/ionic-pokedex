@@ -1,0 +1,16 @@
+<ion-list>
+    <ion-item *ngFor="let move of moves.slice(0, 20)" [routerLink]="'/pokemon/'" [detail]="true">
+        <ion-label id="label-move">
+            <!-- <p>Move</p> -->
+            <h1>{{ move.move.name | titlecase }}</h1>
+        </ion-label>
+        <ion-label id="label-small">
+            <p>Level</p>
+            <h3>{{ move.version_group_details[0].level_learned_at }}</h3>
+        </ion-label>
+        <ion-label id="label-small">
+            <p>Method</p>
+            <h3>{{ move.version_group_details[0].move_learn_method.name }}</h3>
+        </ion-label>
+    </ion-item>
+</ion-list>
